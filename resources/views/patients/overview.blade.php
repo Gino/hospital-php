@@ -17,11 +17,15 @@
                             {{ url('patients/asc/id') }}
                             @elseif (Request::segment(2) == "asc")
                             {{ url('patients/desc/id') }}
+                            @else
+                            {{ url('patients/desc/id') }}
                         @endif
                         ">ID</a></th>
                     <th scope="col"><a href="@if (Request::segment(2) == "desc")
                             {{ url('patients/asc/name') }}
                             @elseif (Request::segment(2) == "asc")
+                            {{ url('patients/desc/name') }}
+                            @else
                             {{ url('patients/desc/name') }}
                         @endif
                         ">Name</a></th>
@@ -29,17 +33,23 @@
                             {{ url('patients/asc/species_id') }}
                             @elseif (Request::segment(2) == "asc")
                             {{ url('patients/desc/species_id') }}
+                            @else
+                            {{ url('patients/desc/species_id') }}
                         @endif
                         ">Specie ID</a></th>
                     <th scope="col"><a href="@if (Request::segment(2) == "desc")
                             {{ url('patients/asc/client_id') }}
                             @elseif (Request::segment(2) == "asc")
                             {{ url('patients/desc/client_id') }}
+                            @else
+                            {{ url('patients/desc/client_id') }}
                         @endif
                         ">Client ID</a></th>
                     <th scope="col"><a href="@if (Request::segment(2) == "desc")
                             {{ url('patients/asc/patient_status') }}
                             @elseif (Request::segment(2) == "asc")
+                            {{ url('patients/desc/patient_status') }}
+                            @else
                             {{ url('patients/desc/patient_status') }}
                         @endif
                         ">Patient description</a></th>
